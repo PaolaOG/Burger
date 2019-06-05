@@ -1,13 +1,14 @@
 USE burgers_db;
 
 INSERT INTO burgers (burger_name, devoured)
-VALUES (DoubleMeat, yes);
+VALUES ("DoubleMeat", true);
 
 INSERT INTO burgers (burger_name, devoured)
-VALUES (VeganBurger, yes);
+VALUES ("VeganBurger", true);
 
 INSERT INTO burgers (burger_name, devoured)
-VALUES (KingBeacon, yes);
+VALUES ("KingBeacon", true);
 
 INSERT INTO burgers (burger_name, devoured)
-VALUES (MasterBurger, yes);
+VALUES ("MasterBurger", true);
+  
