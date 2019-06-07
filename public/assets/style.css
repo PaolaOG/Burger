@@ -7,15 +7,15 @@ body {
   .jumbotron h1{
   
       color: #faebf5;
+      text-align: center;
   
   }
   
   .jumbotron{
   
       padding-top: 1%;
-  
-      background-color:transparent !important;
-  
+      background-color:#8400ff;
+      text-align: center;
   }
   
   img {
@@ -31,3 +31,15 @@ body {
       color: rgb(114, 240, 114);
   
   }
+
+  /* .submit-button{
+    
+    text-align: center; 
+
+  } */
+
+
+
+
+
+  
