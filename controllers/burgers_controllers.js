@@ -1,10 +1,8 @@
-var express = require('express');
-var router = express.Router();
+
 var burger = require('../models/burger.js');
 
-
-
-router.get('/', function (req, res) 
+module.exports=function(app){
+  app.get('/', function (req, res) 
 
 {
 
@@ -14,7 +12,7 @@ router.get('/', function (req, res)
 
 
 
-router.get('/index', function (req, res) 
+app.get('/index', function (req, res) 
 
 {
 
@@ -23,13 +21,13 @@ router.get('/index', function (req, res)
   {
     var hbsObject = { burgers: data };
 
-    res.render('index', hbsObject);
+    res.render('index.handlebars', hbsObject);
 
   });
 
 });
 
-router.post('/burger/create', function (req, res) 
+app.post('/burger/create', function (req, res) 
 
 {
 
@@ -43,7 +41,7 @@ router.post('/burger/create', function (req, res)
 
 });
 
-router.post('/burger/eat/:id', function (req, res) 
+app.post('/burger/eat/:id', function (req, res) 
 
 {
 
@@ -56,6 +54,5 @@ router.post('/burger/eat/:id', function (req, res)
   });
 
 });
+}
 
-
-module.exports = router;

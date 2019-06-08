@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 
 var path = require('path')
-
+var exphbs = require('express-handlebars');
 var app = express();
 
 
@@ -24,9 +24,9 @@ app.use(bodyParser.urlencoded({
 
 app.use(methodOverride('_method'))
 
-var exphbs = require('express-handlebars');
 
-app.engine('hbs', exphbs({
+
+ app.engine('hbs', exphbs({
 
     defaultLayout: 'main'
 
@@ -35,12 +35,12 @@ app.engine('hbs', exphbs({
 
 app.set('views', path.join(__dirname, 'views'));
 
-app.set('view engine', 'hbs');
+app.set('view engine', 'hbs'); 
 
+require('./controllers/burgers_controllers.js')(app);
 
-var routes = require('./controllers/burgers_controllers.js');
-
-app.use('/', routes);
 
 
 app.listen(PORT);
+
+

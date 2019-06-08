@@ -45,6 +45,11 @@ body {
 }
 
 #text{
+  width: 100%;
+  text-align: center;
+}
+
+#bName{
   margin-left: auto;
   margin-right: auto;
 }
